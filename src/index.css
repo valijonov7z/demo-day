@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-uzbek-blue: #0A192F;
+  --color-uzbek-deep-blue: #050B14;
+  --color-uzbek-gold: #D4AF37;
+  --color-uzbek-gold-light: #F4DF8D;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+
+  --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-slide-up: slide-up 0.8s ease-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-uzbek-deep-blue);
+  color: white;
+  overflow-x: hidden;
+  cursor: none;
+
+}
+
+.glass-panel {
+  background: rgba(10, 25, 47, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--color-uzbek-gold-light) 0%, var(--color-uzbek-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+a:hover {
+  cursor: url('tubeteika.png'), pointer;
+}
